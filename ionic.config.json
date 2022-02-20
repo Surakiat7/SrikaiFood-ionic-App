@@ -1,0 +1,7 @@
+{
+  "name": "IonicPrj",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
