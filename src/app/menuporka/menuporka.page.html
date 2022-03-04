@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success"class="background-head">
+    <ion-title>จัดการอาหารร้าน {{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium" fullscreen>
+  <ion-card color="dark" class="ion-text-center">
+    <img src="./assets/images/SrikaiBanner.png" />
+  </ion-card>
+  <ion-grid class="ion-text-center">
+    <section>
+      <ion-button size="large" color="dark" expand="block" (click)="List()">แก้ไขรายการอาหาร </ion-button>
+    </section>
+  </ion-grid>
+  <h2>รายการออเดอร์ทั้งหมด </h2>
+  <ion-item *ngFor="let o of this.Orderobj" color="dark">
+      <ion-avatar item-start>
+        <!-- <img src="img/view.jpg"> -->
+        <ion-icon name="cart-outline" size="large"></ion-icon>
+      </ion-avatar>
+      <div>
+        <h5><B>ชื่อผู้สั่ง :</B> {{o.Customer}}<B>   โต๊ะ :</B> {{o.TableNo}}</h5>
+        <h5><B>รายการออเดอร์ :</B> {{o.name}} </h5>
+        <h5><B>ราคา :</B> {{o.price}} บาท</h5>
+        <h5><B>สถานะออเดอร์ :</B> {{o.status}}</h5>
+          <ion-button color="success" (click)="Edit(o)">
+          <ion-icon slot="start" name="settings"></ion-icon>
+            แก้ไขสถานะ
+          </ion-button>
+          <ion-button color="danger" (click)="Del(o)">
+          <ion-icon slot="start" name="trash"></ion-icon>
+              ลบรายการ
+          </ion-button>
+      </div>
+  </ion-item>
+</ion-content>

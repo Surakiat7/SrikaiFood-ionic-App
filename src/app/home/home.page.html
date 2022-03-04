@@ -1,20 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content padding class="background" [fullscreen]="true">
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col class="background-image">
+        <img width="auto" height="auto" alt="logo" src="./assets/images/Srikai-LOGO.png">
+      </ion-col>
+    </ion-row>
+    <section>
+          <ion-button color="dark" size="large" (click)="NextPage()">ลูกค้า</ion-button>
+    </section><br>
+    <section>
+          <ion-button color="dark" size="large" (click)="NextPagePorka()">จัดการร้านอาหาร</ion-button>
+    </section>
+    <br>
+    <ion-row class="ion-text-center">
+    </ion-row>
+  </ion-grid>
 </ion-content>
+

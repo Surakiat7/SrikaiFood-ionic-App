@@ -1,0 +1,16 @@
+.class{
+    width: 80%;
+    margin: auto;
+   }
+// div{
+//     background-image: url("../assets/images/bg.jpg");
+// }
+// ion-content.background{
+//     --background: url(../../assets/images/bg.jpg) 0 0/100% 100% no-repeat;
+// }
+ion-content.background{
+    --ion-background-color:rgb(235, 233, 233) ;
+  }
+ion-card.bgcard{
+    --ion-background-color:#fb9300 ;
+  }   

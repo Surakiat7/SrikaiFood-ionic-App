@@ -1,0 +1,33 @@
+<ion-content color="dark" fullscreen="true" >
+  <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+  <ion-card color="dark">
+  <form  #form="ngForm" (ngSubmit)="register(form)"  >
+   <ion-grid >
+      <ion-row color="primary" justify-content-center >
+        <ion-col center text-center>
+          <div class = "ion-text-center">
+            <div style="display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;">
+            <ion-img  style="width: 500px; height: 350px; "  
+            src="../assets/images/success.png"></ion-img>
+            </div>
+  
+          <h5 class="fontSize" style="color :#343f56" >ทำรายการสำเร็จ</h5>  
+          <h2 class="fontSize"  >ครัวกำลังจัดเตรียมอาหาร</h2>
+          <h2 class="fontSize"  >โปรดรอสักครู่</h2>
+          </div>
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-card>
+</div>
+</ion-content>
+<footer>
+  <ion-toolbar color="dark" class="ion-text-center">
+    <ion-button  (click)="Back()" color="success">กลับหน้าหลัก</ion-button>
+  </ion-toolbar>
+</footer>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="success">
+    <ion-title>รายการอาหาร</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="medium">
+  <ion-label *ngFor="let o of this.Orderobj">
+    <ion-item color="dark">
+      <ion-avatar>
+        <img src={{o.image}}>
+      </ion-avatar>&nbsp;&nbsp;
+      <div>
+      <br>
+        <h5>ชื่ออาหาร {{o.name}}</h5>
+        <h5>ราคา {{o.price}} บาท</h5>
+        <h5>จำนวน {{o.count}} จาน</h5>
+      <br>
+      </div>
+      <ion-button color="success" (click)="editcount(o)" slot="end">
+      <ion-icon name="create-outline"></ion-icon> เพิ่ม </ion-button>
+      <ion-button color="danger" (click)="del(o)" slot="end">
+      <ion-icon name="trash"></ion-icon> ลบ </ion-button>
+    </ion-item>
+  </ion-label>
+  <!-- <ion-button size="large" expand="block" color="primary" (click)="presentPromptEdit(tmp)">
+    <ion-icon name="create-outline"></ion-icon>Add</ion-button> -->
+</ion-content>
+
+<footer>
+  <ion-toolbar color="medium" class="ion-text-center">
+    <ion-button  color="danger" (click)="Back()">กลับ</ion-button>
+      <ion-button  color="success" (click)="SumbitOrder()"> ยืนยัน </ion-button>
+  </ion-toolbar>
+</footer>

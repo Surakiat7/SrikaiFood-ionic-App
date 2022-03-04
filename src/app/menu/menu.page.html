@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color=success class="ion-text-center">
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="medium">
+  <ion-label >
+    <ion-item *ngFor="let f of this.fobj" color="dark">
+      <ion-avatar>
+        <img src={{f.image}}>
+      </ion-avatar>&nbsp;&nbsp;
+      <ion-label >{{f.name}}  ราคา {{f.price}} บาท</ion-label>
+      <ion-button color="success" (click)="AddOrder(f)" >เพิ่ม</ion-button >
+    </ion-item>
+    
+  </ion-label>
+
+</ion-content>
+
+<footer>
+  <ion-toolbar color="medium" class="ion-text-center">
+    <ion-button  color="danger" (click)="Back()">กลับ</ion-button>
+      <ion-button  color="success" (click)="submitfood()"> ยืนยัน </ion-button>
+  </ion-toolbar>
+</footer>

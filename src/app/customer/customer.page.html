@@ -1,0 +1,29 @@
+<ion-content padding class="background" fullscreen="true" >
+  <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+  <ion-card padding class="bgcard">
+  <form  #form="ngForm" (ngSubmit)="register(form)"  >
+   <ion-grid >
+      <ion-row color="primary" justify-content-center >
+        <ion-col center text-center>
+          <ion-img src="https://maggi.co.th/modules/custom/cult_maggi_recipe_local/assets/%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%81%E0%B8%81%E0%B8%B5%E0%B9%89+Maggi+%E0%B8%97%E0%B8%B3%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86+%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B8%A7+%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%B9.jpg"></ion-img>
+          <br>
+          <form (ngSubmit)="Form()">
+            <ion-item>
+              <ion-label color="light">เลขที่โต๊ะ : </ion-label>
+              <ion-input type="text" [(ngModel)]="customer.TableNo" name="TableNo" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="light">ชื่อลูกค้า : </ion-label>
+              <ion-textarea [(ngModel)]="customer.Customername" name="Customername"></ion-textarea>
+            </ion-item>
+            <ion-toolbar color="#fb9300" class="ion-text-center">
+              <ion-button shape="round" type="submit" color="success" (click)="submit()"> ยืนยัน </ion-button>
+            </ion-toolbar>
+          </form>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-card>
+</div>
+</ion-content>

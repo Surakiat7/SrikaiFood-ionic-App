@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Food list</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="medium">
+    <p>รายการอาหารทั้งหมด <p>
+    <ion-item-sliding *ngFor="let f of this.fobj">
+      <ion-item color="dark">
+        <ion-img style="width: 150px; height: 150px;" src={{f.image}}></ion-img>&nbsp;&nbsp;&nbsp;&nbsp;
+        <div>
+          <h1>ชื่ออาหาร : </h1>
+          <h6>{{f.name}} ราคา : {{f.price}}</h6>
+        </div>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option color="medium" (click)="Edit(f)">
+          <ion-icon slot="start" name="settings"></ion-icon>
+                แก้ไข
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="Del(f)">
+          <ion-icon slot="start" name="trash"></ion-icon>
+                ลบ
+        </ion-item-option>
+      </ion-item-options>  
+
+    </ion-item-sliding>
+ 
+
+</ion-content>
+<footer>
+  <ion-toolbar color="medium" class="ion-text-center">
+    <ion-button color="dark" (click)="Back()" icon-start>
+      <ion-icon name="arrow-back"  ></ion-icon>
+      กลับหน้าหลัก
+    </ion-button>
+    <ion-button color="success" (click)="Add()" icon-start>
+      <ion-icon name="add"  ></ion-icon>
+        เพิ่มรายการอาหาร
+        </ion-button>
+  </ion-toolbar>
+</footer>
